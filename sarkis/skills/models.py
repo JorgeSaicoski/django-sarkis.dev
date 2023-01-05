@@ -21,10 +21,7 @@ class SubService(models.Model):
     skills = models.ManyToManyField(Skill, related_name="project")
 
     def __str__(self):
-        return {
-            'name': self.name,
-            'skills': self.skills
-        }
+        return self.name
 
 
 class Service(models.Model):
