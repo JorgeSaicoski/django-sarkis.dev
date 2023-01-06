@@ -105,7 +105,7 @@ nav{
         border-radius: 5px;
         cursor: pointer;
         box-shadow: 0 10px 40px 2px rgba(0,0,0,0.4);
-        background: #000;
+        background: $dark-color;
         transform-origin: center center 0px;
         transition: all .5s ease-out;
         animation-name: animate;
@@ -125,7 +125,7 @@ nav{
             align-items: center;
             max-width: 100%;
             height: 100%;
-            color: #fff;
+            color: white;
         }
     }
 }
@@ -210,9 +210,53 @@ nav{
 
 }
 
+#skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1em 0;
+    & .skill-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 35px;
+        height: 3em;
+        width: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        &-text{
+            z-index: 1;
+            width: 95%;
+            height: 85%;
+            background-color: $dark-color;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        & span{
+            position: absolute;
+            width: 150%;
+            height: 500%;
+            background: rgb(131,58,180);
+            background: linear-gradient(90deg, $dark-color 35%, $alert-color 50%, $dark-color 70%);
+            animation-name: spin;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
 
 
 
+@keyframes spin{
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
 
 
 @keyframes animate {
