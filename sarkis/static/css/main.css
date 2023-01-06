@@ -95,7 +95,7 @@ nav ul li:hover span:nth-child(4) {
 .categories .card {
   width: 200px;
   height: 300px;
-  margin-left: 200px;
+  margin: 0 0 300px 200px;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 10px 40px 2px rgba(0, 0, 0, 0.4);
@@ -121,6 +121,76 @@ nav ul li:hover span:nth-child(4) {
   max-width: 100%;
   height: 100%;
   color: #fff;
+}
+
+#projects {
+  display: flex;
+  flex-direction: row;
+  padding: 5vw;
+}
+#projects .project, #projects .project img {
+  position: relative;
+  background-color: #2A1A1F;
+  width: 250px;
+  height: 350px;
+  border-radius: 10%;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  padding-top: 1em;
+  transition: 1s;
+}
+#projects .project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+#projects .project-text-skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 1em;
+  transition-delay: 1.25s;
+  transition-duration: 0.25s;
+}
+#projects .project-text-skill p {
+  margin-left: 3px;
+}
+#projects .project span {
+  position: absolute;
+  bottom: -30%;
+  left: -300%;
+  transform: rotate(45deg);
+  height: 600%;
+  transition: 1s;
+  width: 1000%;
+  opacity: 0.45;
+  background: linear-gradient(90deg, #764134 25%, rgb(113, 110, 11) 30%, rgb(121, 118, 9) 35%, rgba(0, 0, 36, 0) 40%);
+}
+#projects .project span:hover {
+  bottom: -400%;
+  left: -100%;
+}
+#projects .project img {
+  border-radius: 0;
+  transition: 1s;
+}
+#projects .project:hover img, #projects .project img:hover img {
+  height: 0;
+  width: 0;
+}
+#projects .project:hover .project-text-skill, #projects .project img:hover .project-text-skill {
+  background-color: #1AC8ED;
+}
+
+.title {
+  height: auto;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  background: #3185FC;
+  padding: 0.5em;
+  color: black;
 }
 
 @keyframes animate {

@@ -1,0 +1,24 @@
+{% load static %}
+<section>
+  <div class="title">
+    <h2>Projects</h2>
+  </div>
+  <ul id="projects">
+    {% for project in projects %}
+    <li class="project">
+      <h4>{{project.name}}</h4>
+      <img src="{% static 'images/prueba.jpg' %}" alt="prueba">
+      <div class="project-text">
+        <p>{{project.description}}</p>
+        <div class="project-text-skill">
+          <p>Skills:</p>
+          {% for skill in project.get_skills %}
+           <p>{{skill.name}}</p>
+          {% endfor %}
+        </div>
+      </div>
+      <span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
