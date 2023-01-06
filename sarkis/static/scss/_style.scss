@@ -133,18 +133,21 @@ nav{
 #projects{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 5vw;
     & .project{
         position: relative;
         background-color: $dark-color;
-        width: 250px;
-        height: 350px;
+        width: 350px;
+        height: 450px;
         border-radius: 10%;
         overflow: hidden;
         text-align: center;
         color:white;
         padding-top: 1em;
         transition: 1s;
+        margin-left: 35px;
         &-text{
             display: flex;
             flex-direction: column;
@@ -181,6 +184,7 @@ nav{
             @extend .project;
             border-radius: 0;
             transition: 1s;
+            margin: 0;
         }
         &:hover{
             & img{

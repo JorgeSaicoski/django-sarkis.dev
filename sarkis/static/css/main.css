@@ -126,19 +126,22 @@ nav ul li:hover span:nth-child(4) {
 #projects {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 5vw;
 }
 #projects .project, #projects .project img {
   position: relative;
   background-color: #2A1A1F;
-  width: 250px;
-  height: 350px;
+  width: 350px;
+  height: 450px;
   border-radius: 10%;
   overflow: hidden;
   text-align: center;
   color: white;
   padding-top: 1em;
   transition: 1s;
+  margin-left: 35px;
 }
 #projects .project-text {
   display: flex;
@@ -175,6 +178,7 @@ nav ul li:hover span:nth-child(4) {
 #projects .project img {
   border-radius: 0;
   transition: 1s;
+  margin: 0;
 }
 #projects .project:hover img, #projects .project img:hover img {
   height: 0;
