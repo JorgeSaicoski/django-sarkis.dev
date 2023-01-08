@@ -21,3 +21,12 @@ class Project(models.Model):
         for i in self.skill.all():
             list.append(i)
         return list
+
+    @property
+    def get_sub_services(self):
+        list = []
+        for i in self.sub_services.all():
+            list.append(i)
+        return list
+
+

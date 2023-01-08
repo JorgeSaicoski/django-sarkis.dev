@@ -167,17 +167,16 @@ nav{
         }
         & span{
             position: absolute;
-            bottom: -30%;
+            bottom: 0%;
             left: -300%;
-            transform: rotate(45deg);
             height: 600%;
-            transition: 1s;
+            transition: 0.5s linear;
             width: 1000%;
             opacity: 0.45;
-            background: linear-gradient(90deg, $second-color 25%, rgba(113,110,11,1) 30%, rgba(121,118,9,1) 35%, rgba(0,0,36,0) 40%);
+            background: linear-gradient(53deg, $second-color 40%, rgba(113,110,11,1) 42.5%, rgba(121,118,9,1) 43.5%, rgba(0,0,36,0) 44.5%);
             &:hover{
-                bottom: -400%;
-                left: -100%;
+                bottom: -475%;
+                left: -235%;
             }
         }
         & img{
@@ -242,11 +241,17 @@ nav{
             position: absolute;
             width: 150%;
             height: 500%;
-            background: rgb(131,58,180);
-            background: linear-gradient(90deg, $dark-color 35%, $alert-color 50%, $dark-color 70%);
-            animation-name: spin;
-            animation-duration: 7s;
-            animation-iteration-count: infinite;
+            background: linear-gradient(90deg, $dark-color 35% ,$alert-color 47.5%, $alert-color 50%, $alert-color 55.5%, $dark-color 65%);
+            transform:rotate(65deg);
+        }
+        &:hover{
+            & span{
+                animation-name: spin;
+                animation-duration: 14s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: ease-out;
+            }
         }
     }
 }
@@ -254,8 +259,8 @@ nav{
 
 
 @keyframes spin{
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+    from {transform:rotate(65deg);}
+    to {transform:rotate(1145deg);}
 }
 
 

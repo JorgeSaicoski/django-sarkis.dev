@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>{{project.name}}</title>
+</head>
+<body>
+    {% include 'website/navbar.html' %}
+    <div class="title-page">
+        <h3>{{project.name}}</h3>
+        {% for skill in skills %}
+           <p>{{skill.name}}</p>
+        {% endfor %}
+    </div>
+    <div>
+        <div>
+            <p>{{project.description}}</p>
+        </div>
+        <div>
+            {% for service in sub_services %}
+            <div>
+                <p>{{service.name}}</p>
+                <p>{{service.description}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

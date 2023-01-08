@@ -2,7 +2,7 @@
 <section>
   <ul id="projects">
     {% for project in projects %}
-    <li class="project">
+    <li class="project" >
       <h4>{{project.name}}</h4>
       <img src="{% static 'images/prueba.jpg' %}" alt="prueba">
       <div class="project-text">
@@ -14,7 +14,7 @@
           {% endfor %}
         </div>
       </div>
-      <span></span>
+      <span><a class="project-text" href="/project/{{project.name}}"></a></span>
     </li>
     {% endfor %}
   </ul>

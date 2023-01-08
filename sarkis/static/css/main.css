@@ -162,18 +162,17 @@ nav ul li:hover span:nth-child(4) {
 }
 #projects .project span {
   position: absolute;
-  bottom: -30%;
+  bottom: 0%;
   left: -300%;
-  transform: rotate(45deg);
   height: 600%;
-  transition: 1s;
+  transition: 0.5s linear;
   width: 1000%;
   opacity: 0.45;
-  background: linear-gradient(90deg, #764134 25%, rgb(113, 110, 11) 30%, rgb(121, 118, 9) 35%, rgba(0, 0, 36, 0) 40%);
+  background: linear-gradient(53deg, #764134 40%, rgb(113, 110, 11) 42.5%, rgb(121, 118, 9) 43.5%, rgba(0, 0, 36, 0) 44.5%);
 }
 #projects .project span:hover {
-  bottom: -400%;
-  left: -100%;
+  bottom: -475%;
+  left: -235%;
 }
 #projects .project img {
   border-radius: 0;
@@ -231,19 +230,23 @@ nav ul li:hover span:nth-child(4) {
   position: absolute;
   width: 150%;
   height: 500%;
-  background: rgb(131, 58, 180);
-  background: linear-gradient(90deg, #2A1A1F 35%, #FFBA08 50%, #2A1A1F 70%);
+  background: linear-gradient(90deg, #2A1A1F 35%, #FFBA08 47.5%, #FFBA08 50%, #FFBA08 55.5%, #2A1A1F 65%);
+  transform: rotate(65deg);
+}
+#skills .skill-card:hover span {
   animation-name: spin;
-  animation-duration: 7s;
+  animation-duration: 14s;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
 }
 
 @keyframes spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(65deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(1145deg);
   }
 }
 @keyframes animate {

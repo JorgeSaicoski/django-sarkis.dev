@@ -19,3 +19,15 @@ def home(req):
         'skills': skills
     }
     return render(req, 'website/home.html', context)
+
+def project(req, pk):
+    project = Project.objects.get(name=pk)
+    sub_services = project.get_sub_services
+    skills = project.get_skills
+
+    context = {
+        'sub_services': sub_services,
+        'project': project,
+        'skills': skills
+    }
+    return render(req, 'website/project.html', context)
