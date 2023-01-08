@@ -206,6 +206,37 @@ nav{
     background: $base-color;
     padding: 0.5em;
     color: black;
+    &-page{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        & h3{
+            font-size: 3em;
+        }
+        &-itens{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 100%;
+            & p{
+                padding: 3px 0;
+                width: 100px;
+                background-color: $dark-color;
+                border-radius: 10px;
+                text-align: center;
+                margin-left: 15px;
+                color: white;
+                border: 2px $second-color solid;
+                &:hover{
+                    border-color: $dark-color;
+                    background-color:  $select-color;
+                }
+            }
+        }
+    }
 
 }
 
@@ -250,6 +281,55 @@ nav{
                 animation-duration: 14s;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
+                animation-timing-function: ease-out;
+            }
+        }
+    }
+}
+
+.body-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em 0;
+    &-left{
+        text-align: justify;
+        background-color: $base-color;
+        border-radius: 0 10px 0 2px;
+        min-width: 55%;
+    }
+    &-rigth{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        & .service{
+            padding: 3px 0;
+            background-color: $dark-color;
+            border-radius: 10px;
+            text-align: center;
+            margin: 15px auto;
+            color: white;
+            border: 2px $second-color solid;
+            overflow: hidden;
+            transition: 1s;
+            width: 150px;
+            &:hover{
+                border-color: $dark-color;
+                background-color:  $select-color;
+            }
+            &-actived{
+                transition: 0.5s;
+                padding: 1em;
+                text-align: justify;
+            }
+            &-deactived{
+                transition: 0.5s;
+                width: 0px;
+                height: 0px;
+                opacity: 0;
+                animation-name: spin;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
                 animation-timing-function: ease-out;
             }
         }
