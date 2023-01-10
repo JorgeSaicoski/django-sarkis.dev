@@ -189,10 +189,11 @@ nav{
 .categories{
     display: flex;
     flex-direction: row;
+    height: 700px;
     & .card{
         width: 200px;
         height: 300px;
-        margin: 0 0 300px 200px;
+        margin-left:200px;
         border-radius: 5px;
         cursor: pointer;
         box-shadow: 0 10px 40px 2px rgba(0,0,0,0.4);
@@ -238,7 +239,7 @@ nav{
         color:white;
         padding-top: 1em;
         transition: 1s;
-        margin-left: 35px;
+        margin: 10px 35px 0 0;
         &-text{
             display: flex;
             flex-direction: column;
@@ -294,7 +295,11 @@ nav{
     height: auto;
     font-size: 2.5rem;
     text-transform: uppercase;
-    background: $base-color;
+    background: skyblue;
+    border-bottom: 2px solid deepskyblue;
+    border-top: 2px solid deepskyblue;
+    border-radius: 10px;
+    margin: 0 10% 0 15px;
     padding: 0.5em;
     color: black;
     &-page{
@@ -484,12 +489,10 @@ nav{
 #listToSearch{
     border-radius: 5px;
     font-size: 12px;
-    font-weight: normal;
     border: none;
     border-collapse: collapse;
     width: 100%;
     max-width: 100%;
-    white-space: nowrap;
     background-color: white;
     & td, th{
         text-align: center;
@@ -497,6 +500,7 @@ nav{
     }
     & td{
         border-right: 1px solid #f8f8f8;
+        border-bottom: 1px solid black;
         font-size: 12px;
     }
     & th{
@@ -514,7 +518,114 @@ nav{
     }
 }
 
+#search{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    margin:30px 10px;
+    padding: 2vw;
+    &:hover{
+        & input, p {
+            background-color: $second-color;
+        }
+    }
+    &Bar{
+        min-width: 500px;
+        width: 50%;
+        padding: 10px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid black;
+        &:focus{
+            background-color: lightblue;
+        }
+    }
+    & .search-text{
+        @extend #searchBar;
+        min-width: auto;
+        width: auto;
+    }
+}
 
+
+
+
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  position: relative;
+  background: $dark-color;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 4.5rem;
+  margin: 0 0 10px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 500px;
+  background-color: $base-color;
+  transition: 1s;
+}
+
+.waves::before, .waves::after {
+  content: '';
+  position: absolute;
+  width: 300vw;
+  height: 300vw;
+  top: -65vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.waves::before {
+  border-radius: 40%;
+  background: deepskyblue;
+  animation: waves 20s linear infinite;
+}
+
+.waves::after {
+  border-radius: 35%;
+  background: $dark-color;
+  animation: waves 18s linear infinite;
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
 
 @keyframes spin{
     from {transform:rotate(65deg);}

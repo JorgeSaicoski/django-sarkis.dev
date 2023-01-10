@@ -29,9 +29,9 @@ time, mark, audio, video {
 
 body {
 	line-height: 1;
-	background: linear-gradient(to bottom, #5d326c, #350048);
+	background: $base-color;
 	min-height: 100vh;
-	margin-top: 200px;
+	margin-top: 117px;
 }
 ol, ul {
 	list-style: none;

@@ -8,7 +8,8 @@
 </head>
 <body>
     {% include 'website/navbar.html' %}
-    <div class="search">
+    <div id="search">
+        <p class="search-text">Search:</p>
         <input type="text" id="searchBar" onkeyup="searchBar()" placeholder="What are you searching?" title="Type in a name">
     </div>
     <table id="listToSearch">
@@ -16,6 +17,7 @@
             <th>Name</th>
             <th>Description</th>
             <th>Skills</th>
+            <th>Detail</th>
         </tr>
       {% for project in projects %}
         <tr>
