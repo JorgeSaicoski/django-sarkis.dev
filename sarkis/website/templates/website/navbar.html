@@ -1,26 +1,36 @@
 {% load static %}
 <nav id="navbar">
   <ul>
-    <li>
-      home
-      <span></span><span></span><span></span><span></span>
-    </li>
-    <li>
-      projects
-      <span></span><span></span><span></span><span></span>
-    </li>
-    <li>
-      skills
-      <span></span><span></span><span></span><span></span>
-    </li>
-    <li>
-      services
-      <span></span><span></span><span></span><span></span>
-    </li>
-    <li>
-      contact
-      <span></span><span></span><span></span><span></span>
-    </li>
+    <a href="{% url 'home' %}">
+      <li>
+          home
+          <span></span><span></span><span></span><span></span>
+      </li>
+    </a>
+    <a href="{% url 'home' %}">
+      <li>
+          projects
+          <span></span><span></span><span></span><span></span>
+      </li>
+    </a>
+    <a href="{% url 'home' %}">
+      <li>
+          skills
+          <span></span><span></span><span></span><span></span>
+      </li>
+    </a>
+    <a href="{% url 'home' %}">
+      <li>
+          service
+          <span></span><span></span><span></span><span></span>
+      </li>
+    </a>
+    <a href="{% url 'home' %}">
+      <li>
+          contact
+          <span></span><span></span><span></span><span></span>
+      </li>
+    </a>
   </ul>
   <div class="logo">
     <div></div>

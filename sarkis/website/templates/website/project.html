@@ -19,16 +19,16 @@
     <section id="links">
         <h3>Links:</h3>
         {% if project.link %}
-        <a href="{{project.link}}">{{project.link}}</a>
+        <a href="{{project.link}}">Web Site</a>
         {% endif %}
         {% if project.github %}
-        <a href="{{project.github}}">{{project.github}}</a>
+        <a href="{{project.github}}">Github</a>
         {% endif %}
     </section>
     <section class="body-page">
         <div class="body-page-left">
-            Description:
-            <p>{{project.description}}</p>
+            <p>Goals:</p>
+            <p>{{project.goal}}</p>
         </div>
         <div class="body-page-rigth">
             <h5>Skills:</h5>
@@ -38,6 +38,10 @@
                 <p class="service-deactived">{{service.description}}</p>
             </div>
             {% endfor %}
+        </div>
+        <div class="body-page-down">
+            <p>Description:</p>
+            <p>{{project.description}}</p>
         </div>
     </section>
     <script type="text/javascript" src="{% static 'js/project.js' %}"></script>

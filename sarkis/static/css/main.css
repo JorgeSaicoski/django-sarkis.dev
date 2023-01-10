@@ -53,6 +53,15 @@ nav {
   z-index: 100;
   transition: 1s;
 }
+nav a {
+  color: #FFBA08;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+nav a:hover {
+  color: black;
+}
 @media screen and (max-width: 1200px) {
   nav {
     width: 150px;
@@ -107,7 +116,6 @@ nav ul {
   }
 }
 nav ul li {
-  color: #FFBA08;
   background-color: #764134;
   font-size: 16px;
   border: 2px solid #FFBA08;
@@ -151,9 +159,6 @@ nav ul li span:nth-child(2) {
 nav ul li span:nth-child(4) {
   left: 100%;
   transform: translateY(-150%);
-}
-nav ul li:hover {
-  color: black;
 }
 nav ul li:hover span {
   transform: translateY(0) scale(1.5);
@@ -363,7 +368,7 @@ nav ul li:hover span:nth-child(4) {
   background-color: #764134;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 1em;
@@ -378,18 +383,25 @@ nav ul li:hover span:nth-child(4) {
   padding: 5px;
   background-color: #FFBA08;
   border-radius: 5px;
+  margin-right: 15px;
 }
 #links a:hover {
   background-color: #1AC8ED;
 }
 #links a:visited {
   background-color: #2A1A1F;
+  color: white;
+}
+#links a:visited:hover {
+  background-color: #1AC8ED;
+  color: black;
 }
 
 .body-page {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 2em 0;
 }
 .body-page-left {
@@ -400,15 +412,19 @@ nav ul li:hover span:nth-child(4) {
   padding: 1em;
   margin: 1vw;
   min-width: 55%;
+  border: 2px #3185FC solid;
 }
 .body-page-rigth {
   display: flex;
   padding: 1em;
   margin: 1vw;
   border-radius: 2px 0 0 15px;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   flex-grow: 1;
+  max-width: 35%;
   background-color: #3185FC;
+  border: 2px #2A1A1F solid;
 }
 .body-page-rigth .service {
   padding: 3px 0;
@@ -420,7 +436,8 @@ nav ul li:hover span:nth-child(4) {
   border: 2px #764134 solid;
   overflow: hidden;
   transition: 1s;
-  width: 150px;
+  min-width: 150px;
+  width: auto;
 }
 .body-page-rigth .service:hover {
   border-color: #2A1A1F;
@@ -440,6 +457,14 @@ nav ul li:hover span:nth-child(4) {
   animation-duration: 3s;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
+}
+.body-page-down {
+  width: 100%;
+  padding: 1em;
+  margin: 1vw;
+  background-color: #3185FC;
+  border: 2px #2A1A1F solid;
+  border-radius: 10px;
 }
 
 @keyframes spin {
