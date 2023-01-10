@@ -366,6 +366,33 @@ nav{
     }
 }
 
+#links{
+    background-color: $second-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1em;
+    margin-top: 50px;
+    h3{
+        width: 100%;
+        text-align: left;
+        margin: 7.5px 0;
+    }
+    a{
+        padding: 5px;
+        background-color: $alert-color;
+        border-radius: 5px;
+        &:hover{
+            background-color: $select-color;
+        }
+        &:visited {
+            background-color: $dark-color;
+        }
+    }
+}
+
 .body-page{
     display: flex;
     flex-direction: row;
@@ -373,7 +400,8 @@ nav{
     margin: 2em 0;
     &-left{
         text-align: justify;
-        background-color: $base-color;
+        background-color: $dark-color;
+        color: white;
         border-radius: 0 10px 0 2px;
         padding: 1em;
         margin: 1vw;
@@ -381,8 +409,12 @@ nav{
     }
     &-rigth{
         display: flex;
+        padding: 1em;
+        margin: 1vw;
+        border-radius: 2px 0 0 15px;
         flex-direction: column;
         flex-grow: 1;
+        background-color: $base-color;
         & .service{
             padding: 3px 0;
             background-color: $dark-color;

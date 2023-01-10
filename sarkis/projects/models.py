@@ -11,6 +11,7 @@ class Project(models.Model):
     skill = models.ManyToManyField(Skill, related_name="skill")
     link = models.CharField(max_length=50, null=True, blank=True)
     github = models.CharField(max_length=50, null=True, blank=True)
+    goal = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name

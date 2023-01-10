@@ -8,19 +8,30 @@
 </head>
 <body>
     {% include 'website/navbar.html' %}
-    <div class="title-page">
+    <section class="title-page">
         <h3>{{project.name}}</h3>
         <div class="title-page-itens">
         {% for skill in skills %}
            <p>{{skill.name}}</p>
         {% endfor %}
         </div>
-    </div>
-    <div class="body-page">
+    </section>
+    <section id="links">
+        <h3>Links:</h3>
+        {% if project.link %}
+        <a href="{{project.link}}">{{project.link}}</a>
+        {% endif %}
+        {% if project.github %}
+        <a href="{{project.github}}">{{project.github}}</a>
+        {% endif %}
+    </section>
+    <section class="body-page">
         <div class="body-page-left">
+            Description:
             <p>{{project.description}}</p>
         </div>
         <div class="body-page-rigth">
+            <h5>Skills:</h5>
             {% for service in sub_services %}
             <div class="service">
                 <p class="service-actived">{{service.name}}</p>
@@ -28,7 +39,7 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
     <script type="text/javascript" src="{% static 'js/project.js' %}"></script>
 </body>
 </html>
