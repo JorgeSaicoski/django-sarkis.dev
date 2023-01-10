@@ -476,6 +476,39 @@ nav{
     }
 }
 
+#listToSearch{
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+    & td, th{
+        text-align: center;
+        padding: 8px;
+    }
+    & td{
+        border-right: 1px solid #f8f8f8;
+        font-size: 12px;
+    }
+    & th{
+        color: #ffffff;
+        background: #4FC3A1;
+        &:nth-child(odd) {
+            color: #ffffff;
+            background: #324960;
+        }
+    }
+    & .select{
+        background-color: #1AC8ED;
+        border: 2px solid $alert-color;
+
+    }
+}
+
 
 
 @keyframes spin{

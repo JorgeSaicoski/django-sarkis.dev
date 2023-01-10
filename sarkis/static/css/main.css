@@ -467,6 +467,38 @@ nav ul li:hover span:nth-child(4) {
   border-radius: 10px;
 }
 
+#listToSearch {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+#listToSearch td, #listToSearch th {
+  text-align: center;
+  padding: 8px;
+}
+#listToSearch td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+#listToSearch th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+#listToSearch th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+#listToSearch .select {
+  background-color: #1AC8ED;
+  border: 2px solid #FFBA08;
+}
+
 @keyframes spin {
   from {
     transform: rotate(65deg);
