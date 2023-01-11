@@ -38,3 +38,12 @@ def projects(req):
         'projects': projects,
     }
     return render(req, 'website/projects_page.html', context)
+
+def skills(req):
+    skills =  Skill.objects.all()
+
+    context = {
+        'skills': skills,
+    }
+    return render(req, 'website/skills_page.html', context)
+

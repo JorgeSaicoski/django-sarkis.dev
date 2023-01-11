@@ -613,8 +613,8 @@ nav{
 
 .waves::after {
   border-radius: 35%;
-  background: $dark-color;
-  animation: waves 18s linear infinite;
+  background:   linear-gradient(270deg, $dark-color 35%, $second-color 75%, $alert-color 100%);
+  animation: waves 32s linear infinite;
 }
 
 @keyframes waves {

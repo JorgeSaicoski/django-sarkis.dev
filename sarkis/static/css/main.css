@@ -596,8 +596,8 @@ nav ul li:hover span:nth-child(4) {
 
 .waves::after {
   border-radius: 35%;
-  background: #2A1A1F;
-  animation: waves 18s linear infinite;
+  background: linear-gradient(270deg, #2A1A1F 35%, #764134 75%, #FFBA08 100%);
+  animation: waves 32s linear infinite;
 }
 
 @keyframes waves {
@@ -657,6 +657,11 @@ body {
   background: #3185FC;
   min-height: 100vh;
   margin-top: 117px;
+}
+@media screen and (max-width: 1200px) {
+  body {
+    margin-top: 0;
+  }
 }
 
 ol, ul {

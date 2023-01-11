@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>Sarkis.Dev</title>
+</head>
+<body>
+    {% include 'website/navbar.html' %}
+    <div id="search">
+        <p class="search-text">Search:</p>
+        <input type="text" id="searchBar" onkeyup="searchBar()" placeholder="What are you searching?" title="Type in a name">
+    </div>
+    <table id="listToSearch">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+      {% for skill in skills %}
+        <tr>
+            <td>{{skill.name}}</td>
+            <td>{{skill.description}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+    <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/search.js' %}"></script>
+
+
+</body>
+</html>

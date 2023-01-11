@@ -7,5 +7,6 @@ urlpatterns = [
 	path('', views.home, name="home"),
 	path('project/<str:pk>', views.project, name="project"),
 	path('projects', views.projects, name="projects"),
+	path('skills', views.skills, name="skills"),
 
 ]
