@@ -1,0 +1,12 @@
+<section id="service">
+  <div class="categories">
+  {% for category in categories %}
+    <button data-services="{{category.service}}" class="button-category">{{category.name}}</button>
+  {% endfor %}
+  </div>
+  {% for service in services %}
+  <div id="{{service.name}}">
+    <p>{{service.name}}</p>
+  </div>
+  {% endfor %}
+</section>

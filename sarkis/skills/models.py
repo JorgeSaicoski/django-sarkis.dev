@@ -23,19 +23,21 @@ class SubService(models.Model):
     def __str__(self):
         return self.name
 
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
+
+    def __str__(self):
+        return self.name
 
 class Service(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
     sub_service = models.ManyToManyField(SubService, related_name="sub_service")
+    categories = models.ManyToManyField(Category, related_name="service")
 
     def __str__(self):
         return self.name
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=50)
-    service = models.ManyToManyField(Service, related_name="service")
 
-    def __str__(self):
-        return self.name
