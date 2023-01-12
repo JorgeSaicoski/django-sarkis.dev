@@ -618,7 +618,7 @@ nav ul li:hover span:nth-child(4) {
 
 .waves::after {
   border-radius: 35%;
-  background: linear-gradient(270deg, #2A1A1F 35%, #764134 75%, #FFBA08 100%);
+  background: linear-gradient(270deg, #2A1A1F 35%, #764134 50%, #FFBA08 100%);
   animation: waves 32s linear infinite;
   z-index: 2;
   opacity: 0.5;
@@ -672,6 +672,10 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

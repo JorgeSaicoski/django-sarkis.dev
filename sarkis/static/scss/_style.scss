@@ -635,7 +635,7 @@ nav{
 
 .waves::after {
     border-radius: 35%;
-    background:  linear-gradient(270deg, $dark-color 35%, $second-color 75%, $alert-color 100%);
+    background:  linear-gradient(270deg, $dark-color 35%, $second-color 50%, $alert-color 100%);
     animation: waves 32s linear infinite;
     z-index: 2;
     opacity: 0.5;

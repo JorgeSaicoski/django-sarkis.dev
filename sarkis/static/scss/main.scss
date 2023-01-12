@@ -26,6 +26,10 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
 	line-height: 1;
