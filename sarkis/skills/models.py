@@ -39,5 +39,12 @@ class Service(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def get_categories(self):
+        list = []
+        for i in self.categories.all():
+            list.append(i)
+        return list
+
 
 

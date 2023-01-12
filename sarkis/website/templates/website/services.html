@@ -1,12 +1,20 @@
 <section id="service">
   <div class="categories">
   {% for category in categories %}
-    <button data-services="{{category.service}}" class="button-category">{{category.name}}</button>
+    <button class="button-category">{{category.name}}</button>
   {% endfor %}
+    <button class="button-category">All</button>
   </div>
-  {% for service in services %}
-  <div id="{{service.name}}">
-    <p>{{service.name}}</p>
+  <div class="services">
+    {% for service in services %}
+    <div class="service">
+      <p>{{service.name}}</p>
+      <span></span>
+      <p>Categories:</p>
+      {% for category in service.get_categories %}
+      <p class="category-service">{{category.name}}</p>
+      {% endfor %}
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </section>
