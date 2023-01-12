@@ -57,7 +57,7 @@ nav{
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 25;
     transition: 1s;
     & a{
         color: $alert-color;
@@ -528,10 +528,22 @@ nav{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        flex-wrap: wrap;
         margin-bottom: 5vh;
         & button{
-            width: 100px;
+            width: 150px;
             margin: 2px;
+            background-color: $alert-color;
+            border: 2px solid $select-color;
+            border-radius: 10px;
+            font-size: 24px;
+            color: $dark-color;
+            &:hover{
+                background-color: $select-color;
+                border: 2px solid $dark-color;
+                cursor: pointer;
+                color: white;
+            }
         }
     }
     & .services{
@@ -602,8 +614,122 @@ nav{
     }
 }
 
+#contact-thanks{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $select-color;
+    opacity: 0.9;
+}
+.contact-thanks-content{
+    top: 50%;
+    left: 20vw;
+    position: fixed;
+    width: 50vw;
+    height: auto;
+    background-color: $alert-color;
+    color: white;
+    opacity: 1.5;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 51;
+    font-size: 2em;
+    border-radius: 10px;
+}
+.form{
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 
+  &-container{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 20%;
+    @media screen and (max-width: 1200px){
+      flex-direction: column;
+    }
 
+    & input{
+      width: 100%;
+      background-color: inherit;
+      border: 2px solid $dark-color;
+      border-style: none none solid none;
+      height: 100%;
+      padding: 5px;
+      &:hover{
+        background-color: white;
+        cursor: text;
+      }
+    }
+    & textarea{
+      width: 100%;
+      border: 2px solid $dark-color;;
+      border-radius: 10px;
+      height: 100%;
+      background-color: inherit;
+      &:hover{
+        background-color: white;
+        cursor: text;
+      }
+    }
+    &-info{
+      width: 33%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and (max-width: 1200px){
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+    &-message{
+      width: 65%;
+      height: 100%;
+      min-height: 20vh;
+      @media screen and (max-width: 1200px){
+        width: 100%;
+      }
+    }
+  }
+}
+.button-container{
+    margin: 0 auto;
+    & button{
+        background-color: $alert-color;
+        padding: 15px;
+        font-size: 24px;
+        color: $dark-color;
+        border-radius: 30px;
+        border-width: 3px 6px;
+        border-color: $select-color;
+        border-style: solid;
+        width: 200px;
+        transition: border 5s;
+        &:hover{
+            background-color: $select-color;
+            border-color: $alert-color;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
 
 
 .waves {
@@ -624,39 +750,48 @@ nav{
     top: -65vw;
     left: 50%;
     transform: translate(-50%, -75%);
+    box-shadow: 2px 0 5px 0 $dark-color;
 }
 
 .waves::before {
     border-radius: 40%;
-    background: $select-color;
-    animation: waves 20s linear infinite reverse;
-    opacity: 0.8;
+    background: linear-gradient(270deg, $select-color 0%, $base-color 50%, $dark-color 100%);
+    animation: waves 30s linear infinite reverse;
+    z-index: 0;
+    opacity: 0.5;
 }
 
 .waves::after {
     border-radius: 35%;
     background:  linear-gradient(270deg, $dark-color 35%, $second-color 50%, $alert-color 100%);
-    animation: waves 32s linear infinite;
+    animation: waves 60s linear infinite;
     z-index: 2;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 @keyframes waves {
     0% {
         transform: translate(-50%, -75%) rotate(0deg);
         height: 300vw;
+        opacity: 0.2;
+    }
+
+    45%{
+        transform: translate(-50%, -85%) rotate(180deg);
+        height: 290vw;
+        opacity: 0.5;
+    }
+    75% {
+        transform: translate(-50%, -75%) rotate(275deg);
+        height: 300vw;
         opacity: 0.8;
     }
-    50%{
-        transform: translate(-50%, -85%) rotate(160deg);
-        height: 375vw;
-        opacity: 0;
-    }
+
 
     100% {
         transform: translate(-50%, -75%) rotate(360deg);
         height: 300vw;
-        opacity: 0.8;
+        opacity: 0.2;
     }
 }
 

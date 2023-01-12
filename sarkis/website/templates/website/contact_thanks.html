@@ -1,0 +1,13 @@
+{% extends "website/contact.html" %}
+
+{% block content %}
+<section id="contact-thanks">
+</section>
+<div class="contact-thanks-content">
+	<h1>{{name}}, thank you!</h1>
+	<p>I will answer your contact soon</p>
+	<a href="{% url 'home' %}#home">
+          Go to Home
+    </a>
+</div>
+{% endblock %}

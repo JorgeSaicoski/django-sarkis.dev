@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from skills.models import Category, Service, Skill
 from projects.models import Project
+from website.forms import ContactForm
 
 
 # Create your views here.
@@ -9,7 +10,7 @@ def home(req):
     categories = Category.objects.all()
     services = Service.objects.all()
     projects = Project.objects.all()
-    skills =  Skill.objects.all()
+    skills = Skill.objects.all()
 
 
     context = {
@@ -46,4 +47,22 @@ def skills(req):
         'skills': skills,
     }
     return render(req, 'website/skills_page.html', context)
+
+def contact(request):
+
+    form = ContactForm()
+    if request.method == "POST":
+
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+
+
+            return render(request, "website/contact_thanks.html", {"name":request.POST["name"]})
+        else:
+            print("PROBLEM")
+
+    context ={"form":form}
+    return render(request, "website/contact.html", context)
 
