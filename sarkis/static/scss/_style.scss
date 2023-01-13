@@ -612,6 +612,29 @@ nav{
         color: rgba(255, 255, 255, 0.5);
         line-height: 1.4;
     }
+    & .content{
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 100;
+        a {
+            display: flex;
+            width: 250px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px;
+            color: white;
+            background-color: rgb(51, 146, 212, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            &:hover{
+                background-color: $select-color;
+            }
+        }
+    }
 }
 
 #contact-thanks{

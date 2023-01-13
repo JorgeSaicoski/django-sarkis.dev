@@ -55,6 +55,7 @@ def contact(request):
 
         form = ContactForm(request.POST)
         if form.is_valid():
+            print(request.POST)
             form.save()
 
 

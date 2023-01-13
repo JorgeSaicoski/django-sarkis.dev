@@ -600,6 +600,29 @@ nav ul li:hover span:nth-child(4) {
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.4;
 }
+.hero .content {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+}
+.hero .content a {
+  display: flex;
+  width: 250px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  color: white;
+  background-color: rgba(51, 146, 212, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+.hero .content a:hover {
+  background-color: #1AC8ED;
+}
 
 #contact-thanks {
   top: 0;
