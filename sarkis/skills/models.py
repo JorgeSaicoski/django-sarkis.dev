@@ -45,6 +45,13 @@ class Service(models.Model):
         for i in self.categories.all():
             list.append(i)
         return list
+    @property
+    def get_sub_service(self):
+        list = []
+        for i in self.sub_service.all():
+            list.append(i)
+        return list
+
 
 
 

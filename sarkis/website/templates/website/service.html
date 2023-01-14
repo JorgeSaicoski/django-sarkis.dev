@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>{{service.name}}</title>
+</head>
+<body>
+    <div id="background">
+        <div class="waves"></div>
+    </div>
+    {% include 'website/navbar.html' %}
+    <section class="title-page">
+        <h3>{{service.name}}</h3>
+        <div class="title-page-itens">
+        {% for category in service.get_categories %}
+           <p>{{category.name}}</p>
+        {% endfor %}
+        </div>
+    </section>
+    <section class="body-page">
+        <div class="body-page-description">
+            <h5>Description:</h5>
+            <p>{{service.description}}</p>
+        </div>
+        <div class="body-page-sub-services">
+            <h5>What can I have with this service?</h5>
+            {% for sub in service.get_sub_service%}
+            <div class="sub-service">
+                <div class="sub-service-name">
+                    <h4>{{sub.name}}</h4>
+                </div>
+                <div class="sub-service-description">
+                    <p>{{sub.description}}</p>
+                </div>
+                <div class="sub-service-detail">
+                    <p>Is required? {{sub.required}}</p>
+                    <p>Many in a project? {{sub.many}}</p>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+        <div class="body-page-contact">
+            <a href="{% url 'contact' %}">Ask for this service</a>
+            <span></span>
+        </div>
+    </section>
+    <script type="text/javascript" src="{% static 'js/service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
+</body>
+</html>

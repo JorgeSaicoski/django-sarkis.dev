@@ -396,6 +396,109 @@ nav ul li:hover span:nth-child(4) {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 2em 0;
+  align-items: center;
+}
+.body-page-description {
+  margin: 2vw;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px 15px 0 0;
+}
+.body-page-description p {
+  text-align: justify;
+  margin-top: 2.5vh;
+}
+.body-page-contact {
+  margin: 10px auto;
+  position: relative;
+  width: 275px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid #FFBA08;
+}
+.body-page-contact a {
+  text-align: center;
+  font-size: 24px;
+  z-index: 1;
+  width: 260px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: white;
+  border: 2px solid #FFBA08;
+}
+.body-page-contact span {
+  position: absolute;
+  top: -300%;
+  left: -150%;
+  width: 400%;
+  height: 800%;
+  background: linear-gradient(90deg, #2A1A1F 25%, #FFBA08 80%, #FFBA08 88%);
+  transform: rotate(65deg);
+  animation-name: spin;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.body-page-contact:hover {
+  background-color: #1AC8ED;
+}
+.body-page-contact:hover span {
+  opacity: 0;
+}
+.body-page-contact:hover a {
+  background-color: #FFBA08;
+}
+.body-page-sub-services {
+  margin: 2vw;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px 0 15px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.body-page-sub-services h5 {
+  width: 100%;
+}
+.body-page-sub-services .sub-service {
+  margin: 2vw;
+  background: none;
+  border: 2px solid #2A1A1F;
+  min-width: 250px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.body-page-sub-services .sub-service-name {
+  width: 100%;
+  background-color: #FFBA08;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 15px 15px 15px 0;
+}
+.body-page-sub-services .sub-service-description {
+  padding: 15px;
+}
+.body-page-sub-services .sub-service-detail {
+  padding: 15px;
+  background-color: #2A1A1F;
+  border-radius: 0 0 15px 15px;
 }
 .body-page-left {
   text-align: justify;
@@ -574,10 +677,11 @@ nav ul li:hover span:nth-child(4) {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  min-height: 100vh;
 }
 #service .services .service {
-  width: 200px;
-  height: 300px;
+  width: 350px;
+  height: 500px;
   margin: 0 20px 20px 0;
   background-color: #2A1A1F;
   transition: 0.3s;
@@ -588,9 +692,11 @@ nav ul li:hover span:nth-child(4) {
   border-style: solid;
   color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
+  text-align: justify;
 }
 #service .services .service span {
   margin: 20px 2px 5px 0;
@@ -872,7 +978,6 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -884,7 +989,7 @@ html {
   scroll-behavior: smooth;
 }
 
-p {
+p, a {
   font-family: "IBM Plex Serif", serif;
 }
 

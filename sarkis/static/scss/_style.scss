@@ -402,6 +402,110 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 2em 0;
+    align-items: center;
+    &-description{
+        margin: 2vw;
+        padding: 15px;
+        background: rgb(0, 0 , 0, 0.5);
+        color: white;
+        border-radius: 10px 15px 0 0;
+        & p{
+            text-align: justify;
+            margin-top: 2.5vh;
+        }
+    }
+    &-contact{
+        margin: 10px auto;
+        position: relative;
+        width: 275px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+        border-radius: 15px;
+        border: 2px solid $alert-color;
+        & a{
+            text-align: center;
+            font-size: 24px;
+            z-index: 1;
+            width: 260px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            border: 2px solid $alert-color;
+        }
+        & span{
+            position: absolute;
+            top:-300%;
+            left:-150%;
+            width: 400%;
+            height: 800%;
+            background: linear-gradient(90deg,  $dark-color 25%, $alert-color 80%, $alert-color 88%, );
+            transform:rotate(65deg);
+            animation-name: spin;
+            animation-duration: 25s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        &:hover{
+            background-color: $select-color;
+            & span{
+                opacity: 0;
+            }
+            & a{
+                background-color: $alert-color;
+            }
+        }
+
+    }
+    &-sub-services{
+        margin: 2vw;
+        padding: 15px;
+        background: rgb(0, 0 , 0, 0.5);
+        color: white;
+        border-radius: 10px 0 15px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        & h5{
+            width: 100%;
+        }
+        & .sub-service{
+            margin: 2vw;
+            background: none;
+            border: 2px solid $dark-color;
+            min-width: 250px;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 15px;
+            background: rgb(0, 0 , 0, 0.5);
+            &-name{
+                width: 100%;
+                background-color: $alert-color;
+                text-align: center;
+                padding: 15px 0;
+                border-radius: 15px 15px 15px 0;
+            }
+            &-description{
+                padding: 15px
+            }
+            &-detail{
+                padding: 15px;
+                background-color: $dark-color;
+                border-radius: 0 0 15px 15px;
+            }
+        }
+    }
     &-left{
         text-align: justify;
         background-color: $dark-color;
@@ -578,9 +682,10 @@ nav{
         justify-content: flex-start;
         flex-wrap: wrap;
         width: 100%;
+        min-height: 100vh;
         & .service{
-            width: 200px;
-            height: 300px;
+            width: 350px;
+            height: 500px;
             margin: 0 20px 20px 0;
             background-color: $dark-color;
             transition: 0.3s;
@@ -591,9 +696,11 @@ nav{
             border-style: solid;
             color: white;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
             align-items: center;
+            text-align: justify;
             & span{
                 margin: 20px 2px 5px 0;
                 height: 0;

@@ -68,3 +68,12 @@ def contact(request):
 
     context = {"form": form}
     return render(request, "website/contact.html", context)
+
+def service(req, pk):
+    service = Service.objects.get(name=pk)
+
+    context = {
+        'service': service,
+    }
+    return render(req, 'website/service.html', context)
+
