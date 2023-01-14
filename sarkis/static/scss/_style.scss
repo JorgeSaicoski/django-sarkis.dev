@@ -613,16 +613,19 @@ nav{
         line-height: 1.4;
     }
     & .content{
+        position: absolute;
+        top:25%;
+        left: 25%;
         width: 100vw;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        z-index: 100;
+        z-index: 10;
         a {
             display: flex;
-            width: 250px;
-            flex-direction: row;
+            height: 100px;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             margin: 15px;

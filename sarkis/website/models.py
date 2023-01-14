@@ -7,6 +7,7 @@ class Message(models.Model):
     email = models.EmailField(max_length=254, default="")
     title = models.CharField(max_length=200)
     description = models.TextField()
+    checker = models.IntegerField(null=True)
     create_at = models.DateTimeField(auto_now_add=True)
 
 
