@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@500&family=IBM+Plex+Serif&display=swap");
 @media screen and (max-width: 1200px) {
   .navbar-active {
     width: 300px;
@@ -249,6 +250,15 @@ nav ul li:hover span:nth-child(4) {
   background-color: #1AC8ED;
 }
 
+#background {
+  position: fixed;
+  left: 1;
+  top: 1;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
 .title {
   height: auto;
   font-size: 2.5rem;
@@ -261,6 +271,9 @@ nav ul li:hover span:nth-child(4) {
   padding: 0.5em;
   color: black;
 }
+.title:hover h2 {
+  letter-spacing: 0 !important;
+}
 .title-page {
   width: 100%;
   display: flex;
@@ -268,6 +281,12 @@ nav ul li:hover span:nth-child(4) {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 25px;
+}
+@media screen and (max-width: 1200px) {
+  .title-page {
+    margin-top: 150px;
+  }
 }
 .title-page h3 {
   font-size: 3em;
@@ -388,6 +407,11 @@ nav ul li:hover span:nth-child(4) {
   min-width: 55%;
   border: 2px #3185FC solid;
 }
+@media screen and (max-width: 1200px) {
+  .body-page-left {
+    width: 85vw;
+  }
+}
 .body-page-rigth {
   display: flex;
   padding: 1em;
@@ -399,6 +423,15 @@ nav ul li:hover span:nth-child(4) {
   max-width: 35%;
   background-color: #3185FC;
   border: 2px #2A1A1F solid;
+}
+.body-page-rigth h5 {
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .body-page-rigth {
+    max-width: 100%;
+    width: 85vw;
+  }
 }
 .body-page-rigth .service {
   padding: 3px 0;
@@ -603,8 +636,8 @@ nav ul li:hover span:nth-child(4) {
 .hero .content {
   position: absolute;
   top: 25%;
-  left: 25%;
-  width: 100vw;
+  left: 0;
+  min-width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -843,8 +876,22 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+p {
+  font-family: "IBM Plex Serif", serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Hind", sans-serif;
+  letter-spacing: 5px;
+  transition: 1s;
 }
 
 body {

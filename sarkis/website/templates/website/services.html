@@ -7,7 +7,7 @@
   </div>
   <div class="services">
     {% for service in services %}
-    <div class="service">
+    <a href="{% url 'home' %}#home" class="service">
       <p>{{service.name}}</p>
       <span></span>
       <p>Categories:</p>
@@ -16,7 +16,7 @@
       {% endfor %}
       <span></span>
       <p>{{service.description}}</p>
-    </div>
+    </a>
     {% endfor %}
   </div>
 </section>

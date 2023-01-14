@@ -52,14 +52,11 @@ def skills(req):
     }
     return render(req, 'website/skills_page.html', context)
 
-first = int(random.randint(0,9))
-second = int(random.randint(0,9))
 
 
 def contact(request):
 
     form = ContactForm()
-
     if request.method == "POST":
         form = ContactForm(request.POST)
         restart()
@@ -69,5 +66,5 @@ def contact(request):
         else:
             print("PROBLEM")
 
-    context = {"form": form,"first": first,"second": second}
+    context = {"form": form}
     return render(request, "website/contact.html", context)

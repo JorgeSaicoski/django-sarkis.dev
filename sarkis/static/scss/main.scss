@@ -1,10 +1,12 @@
 @import 'var';
 @import 'style';
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&family=IBM+Plex+Serif&display=swap');
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -26,8 +28,20 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+a{
+	text-decoration: none;
+}
 html {
   scroll-behavior: smooth;
+}
+p{
+	font-family: 'IBM Plex Serif', serif;
+}
+
+h2,h3,h4,h5,h6{
+	font-family: 'Hind', sans-serif;
+	letter-spacing: 5px;
+	transition: 1s;
 }
 
 
