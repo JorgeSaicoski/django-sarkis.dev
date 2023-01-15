@@ -12,18 +12,13 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 
 SECRET_KEY = 'django-insecure-0#91@y_m-m8)y7#1z=%igjir&ad)veed0u$tiv_(&or$zwpx##'
 
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -67,18 +62,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sarkis.wsgi.application'
 
-
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -95,8 +84,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -105,14 +92,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

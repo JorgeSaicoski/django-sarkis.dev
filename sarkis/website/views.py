@@ -12,6 +12,8 @@ def home(req):
     services = Service.objects.all()
     projects = Project.objects.all()
     skills = Skill.objects.all()
+    for project in projects:
+        print(project.image.url)
 
     context = {
         'categories': categories,

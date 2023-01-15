@@ -9,7 +9,7 @@ restaurantmanager/settings.py
 *.pyc
 __pycache__
 db.sqlite3
-media
+sarkis/images
 
 # Backup files #
 *.bak
