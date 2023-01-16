@@ -215,6 +215,10 @@ nav ul li:hover span:nth-child(4) {
   justify-content: space-around;
   height: 100%;
 }
+#projects .project-text p {
+  margin: 0 15px;
+  text-align: justify;
+}
 #projects .project-text-skill {
   display: flex;
   flex-direction: row;
@@ -1042,7 +1046,7 @@ body {
   line-height: 1;
   background: #3185FC;
   min-height: 100vh;
-  margin-top: 117px;
+  margin-top: 102px;
 }
 @media screen and (max-width: 1200px) {
   body {

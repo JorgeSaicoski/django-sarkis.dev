@@ -212,6 +212,10 @@ nav{
             flex-direction: column;
             justify-content: space-around;
             height: 100%;
+            & p{
+                margin: 0 15px;
+                text-align: justify;
+            }
             &-skill{
                 display: flex;
                 flex-direction: row;
