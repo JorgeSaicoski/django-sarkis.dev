@@ -34,13 +34,26 @@
             <p>{{project.goal}}</p>
         </div>
         <div class="body-page-rigth">
-            <h5>Skills:</h5>
+            <h5>Services:</h5>
             {% for service in sub_services %}
             <div class="service">
                 <p class="service-actived">{{service.name}}</p>
                 <p class="service-deactived">{{service.description}}</p>
             </div>
             {% endfor %}
+        </div>
+        <div class="skill-div">
+            <h5>Skills to do this project:</h5>
+            <section id="skills">
+              {% for skill in skills %}
+              <div class="skill-card">
+                <div class="skill-card-text">
+                  <p>{{skill.name}}</p>
+                </div>
+                <span></span>
+              </div>
+              {% endfor %}
+            </section>
         </div>
         <div class="body-page-down">
             <p>Description:</p>

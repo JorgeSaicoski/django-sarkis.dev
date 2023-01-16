@@ -323,16 +323,17 @@ nav ul li:hover span:nth-child(4) {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 1em 0;
+  flex-wrap: wrap;
+  padding: 1em 10% 1em 0;
 }
 #skills .skill-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 35px;
+  margin: 10px 0 10px 15px;
   height: 3em;
-  width: 150px;
+  min-width: 150px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -384,6 +385,10 @@ nav ul li:hover span:nth-child(4) {
   background-color: #FFBA08;
   border-radius: 5px;
   margin-right: 15px;
+  min-width: 200px;
+  min-height: 20px;
+  text-align: center;
+  font-size: 24px;
 }
 #links a:hover {
   background-color: #1AC8ED;
@@ -404,6 +409,14 @@ nav ul li:hover span:nth-child(4) {
   flex-wrap: wrap;
   margin: 2em 0;
   align-items: center;
+}
+.body-page .skill-div {
+  margin: 2vw;
+  padding: 15px;
+  background: rgba(2, 8, 45, 0.57);
+  color: white;
+  border-radius: 10px 15px 0 0;
+  box-shadow: inset 0 5px 50px 5px #FFBA08;
 }
 .body-page-description {
   margin: 2vw;
