@@ -702,7 +702,7 @@ nav{
     & .services{
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         width: 100%;
         min-height: 100vh;
@@ -745,6 +745,10 @@ nav{
   max-width: 600px;
   margin: 0 auto;
   padding: 0 20px;
+    @media screen and (max-width: 1200px){
+        display: flex!important;
+        flex-direction: column!important;
+    }
 }
 
 .hero {
@@ -754,6 +758,11 @@ nav{
     display: flex;
     align-items: center;
     overflow: hidden;
+    &-picture{
+        background-color: #06274d;
+        padding: 1%;
+        border-radius: 100%;
+    }
     & h2 {
           position: relative;
           z-index: 1;
@@ -778,12 +787,18 @@ nav{
         justify-content: space-around;
         align-items: center;
         z-index: 10;
+        padding: 0!important;
+        margin: 0!important;
         &-media{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             width: 315px;
             align-content: center;
+                @media screen and (max-width: 1200px){
+                    width: 100%;
+                    justify-content: center;
+                }
         }
         a {
             display: flex;

@@ -61,7 +61,6 @@ def contact(request):
     form = ContactForm()
     if request.method == "POST":
         form = ContactForm(request.POST)
-        restart()
         if form.is_valid():
             form.save()
             return render(request, "website/contact_thanks.html", {"name": request.POST["name"]})
